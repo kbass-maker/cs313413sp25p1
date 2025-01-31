@@ -40,17 +40,16 @@ public class TestHelloWorld {
 
   @Test
   public void getMessageInList() {
-    //Having at least two HelloWorld object in the list
-    // fixes the ArrayIndexOutOfBoundsException
-    var list = Arrays.asList(fixture, new HelloWorld());
-    assertEquals("hello world", list.get(1).getMessage());
+    //Test fixed, the list has only one element, we can access it using index 0.
+    var list = Arrays.asList(fixture);
+    assertEquals("hello world", list.get(0).getMessage());
   }
 
   @Test
   public void getYearInList() {
-    //Having at least two HelloWorld object in the list
-    // fixes the ArrayIndexOutOfBoundsException
-    var list = Arrays.asList(fixture, new HelloWorld());
-    assertEquals(2025, list.get(1).getYear());
+    //Test fixed, the list has only one element, we can access it using index 0.
+
+    var list = Arrays.asList(fixture);
+    assertEquals(2025, list.get(0).getYear());
   }
 }
